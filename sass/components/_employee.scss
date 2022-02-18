@@ -1,0 +1,79 @@
+.section--bg-color {
+    background-color: $secondaryBgColor;
+}
+
+.employee {
+    @media screen and (min-width: 768px) {
+        display: flex;
+    }
+
+    @media screen and (min-width: 768px), (max-width: 1199px) {
+        flex-wrap: wrap;
+    }
+}
+
+.employee__item {
+    text-align: center;
+
+    border-radius: $primaryBorderRadius;
+
+    background-color: $whiteColor;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+
+    @media screen and (max-width: 767px) {
+        &:not(:last-child) {
+            margin-bottom: $cardGap;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: calc((100% - 3 * $cardGap) / 4);
+
+        &:not(:last-child) {
+            margin-right: $cardGap;
+        }
+    }
+}
+
+.employee__content {
+    padding-top: 30px;
+    padding-bottom: 24px;
+
+    @media screen and (min-width: 1200px) {
+        padding-bottom: 30px;
+    }
+}
+
+.employee__heading {
+    margin-bottom: 10px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+
+    color: $titleTextColor;
+}
+
+.employee__desc {
+    margin-bottom: 16px;
+
+    font-size: 16px;
+    line-height: 1.19;
+}
+
+.socials--employee-locate {
+    display: flex;
+    justify-content: center;
+}
+
+.socials__link--employee-color {
+    color: $iconColor;
+    background-color: $whiteColor;
+
+    &:hover,
+    &:focus {
+        color: $whiteColor;
+        background-color: $accentColor;
+    }
+}
