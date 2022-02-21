@@ -1,0 +1,27 @@
+.mobile-menu {
+    width: 100%;
+
+    @media screen and (max-width: 767px) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        z-index: 998;
+
+        height: 100%;
+
+        background-color: $whiteColor;
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        overflow: hidden;
+
+        &.is-open {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: initial;
+        }
+    }
+}

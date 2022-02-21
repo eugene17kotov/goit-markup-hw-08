@@ -8,27 +8,28 @@
     padding-top: 0;
 }
 
-// .features {
-//     // display: flex;
-//     // justify-content: center;
-// }
+.features {
+    display: flex;
+    justify-content: center;
+
+    margin: -15px;
+}
 
 .features__item {
     position: relative;
-    // width: calc((100% - 2 * $cardGap) / 3);
 
-    // &:not(:last-child) {
-    //     // margin-right: $cardGap;
-    // }
+    margin: 15px;
+
+    flex-basis: calc((100% - 90px) / 3);
 }
 
 .features__text-bg {
     position: absolute;
     bottom: 0;
     left: 0;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     min-height: 70px;
     width: 100%;

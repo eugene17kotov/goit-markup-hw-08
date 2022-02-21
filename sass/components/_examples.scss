@@ -1,23 +1,23 @@
 .examples {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 
-    @media screen and (max-width: 1199px) {
-        margin: -15px;
-
-        flex-wrap: wrap;
-    }
+    margin: -15px;
 }
 
 .examples__item {
-    @media screen and (max-width: 1199px) {
-        margin: 15px;
-    }
-}
+    margin: 15px;
 
-.examples__item:not(:last-child) {
+    // flex-gap: 15px;
+    flex-basis: calc((100% - 60px) / 2);
+
+    @media screen and (min-width: 768px) {
+        flex-basis: calc((100% - 90px) / 3);
+    }
+
     @media screen and (min-width: 1200px) {
-        margin-right: $cardGap;
+        flex-basis: calc((100% - 180px) / 6);
     }
 }
 
@@ -25,7 +25,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 170px;
     height: 92px;
 
     color: $iconColor;

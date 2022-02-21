@@ -1,21 +1,23 @@
-.mobile-overlay-content {
-    display: none;
-
-    //     display: flex;
-    // flex-direction: column;
-    // justify-content: space-between;
-}
-
 .page-header {
-    position: relative;
+    @media screen and (max-width: 767px) {
+    }
 }
 
 .page-header__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // padding-top: 20px;
-    // padding-bottom: 20px;
+    // flex-grow: 1;
+
+    @media screen and (max-width: 767px) {
+        position: relative;
+    }
+
+    @media screen and (min-width: 768px) {
+        // width: 100%;
+        // padding-top: 20px;
+        // padding-bottom: 20px;
+    }
 
     border-bottom: 1px solid $headerBorderColor;
 }
@@ -30,8 +32,35 @@
     color: $titleTextColor;
 }
 
+.mobile-menu-content {
+    @media screen and (max-width: 767px) {
+        display: none;
+
+        .mobile-menu.is-open & {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            height: 100%;
+
+            margin-left: auto;
+            margin-right: auto;
+
+            padding: 48px 40px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+
+        width: 100%;
+    }
+}
+
 .page-header__socials-list {
     display: flex;
+    flex-wrap: wrap;
 
     @media screen and (min-width: 768px) {
         display: none;
@@ -42,6 +71,8 @@
     position: relative;
     display: flex;
     align-items: center;
+
+    margin-bottom: 10px;
 
     &:not(:last-child) {
         margin-right: 21px;
@@ -77,19 +108,27 @@
     padding: 0;
     border: none;
     background-color: transparent;
+
+    &.is-open {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        z-index: 999;
+    }
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
 }
+
 .menu-button__icon-cross {
     display: none;
 
-    .menu-button--is-open & {
+    .menu-button.is-open & {
         display: block;
     }
 }
 
-.menu-button__icon-menu {
-    display: block;
-
-    .menu-button--is-open & {
-        display: none;
-    }
+.menu-button.is-open .menu-button__icon-menu {
+    display: none;
 }

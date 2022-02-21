@@ -1,11 +1,15 @@
 .header-contacts {
     display: flex;
-
-    @media screen and (max-width: 767px) {
-        flex-direction: column-reverse;
-    }
+    flex-direction: column-reverse;
 
     @media screen and (min-width: 768px) {
+        flex-direction: column;
+        height: 100%;
+        padding: 20px 0;
+    }
+
+    @media screen and (min-width: 1200px) {
+        flex-direction: row;
         align-items: center;
         margin-left: auto;
     }
@@ -19,20 +23,21 @@
 }
 
 .header-contacts__item:not(:last-child) {
-    @media screen and (max-width: 767px) {
-        color: $primaryTextColor;
-        margin-bottom: 64px;
-    }
+    margin-bottom: 64px;
+
+    color: $primaryTextColor;
 
     @media screen and (min-width: 768px) {
+        margin-bottom: 10px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 0;
         margin-right: 50px;
     }
 }
 
 .header-contacts__link {
-    // display: flex;
-    // align-items: center;
-
     font-weight: 500;
     font-size: 34px;
     line-height: 1.17;
@@ -40,9 +45,20 @@
 
     color: inherit;
 
+    &--small-font {
+        font-size: 24px;
+    }
+
     @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: center;
+
         font-size: 12px;
         line-height: 1.14;
+    }
+
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
     }
 
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -55,9 +71,13 @@
 
 .header-contacts__icon {
     display: none;
-    // margin-right: $iconGap;
 
     fill: currentColor;
+
+    @media screen and (min-width: 768px) {
+        display: block;
+        margin-right: $iconGap;
+    }
 
     .header-contacts__link:hover & {
         color: $accentColor;

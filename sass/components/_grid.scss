@@ -1,11 +1,28 @@
 .grid {
-    // display: flex;
-    // flex-wrap: wrap;
-    // margin-left: -1 * $cardGap;
-    // margin-top: -1 * $cardGap;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+
+        margin: -15px;
+    }
 }
 
 .grid__card {
-    // margin-left: $cardGap;
-    // margin-top: $cardGap;
+    flex-basis: 100%;
+
+    @media screen and (max-width: 767px) {
+        &:not(:last-child) {
+            margin-bottom: $cardGap;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        flex-basis: calc((100% - 60px) / 2);
+
+        margin: 15px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        flex-basis: calc((100% - 90px) / 3);
+    }
 }
