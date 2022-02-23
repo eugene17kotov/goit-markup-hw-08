@@ -1,13 +1,9 @@
-.section--bg-color {
-    background-color: $secondaryBgColor;
-}
-
 .employee {
     @media screen and (min-width: 768px) {
         display: flex;
         flex-wrap: wrap;
 
-        margin: -15px;
+        margin: calc(-1 * (#{$cardGap} / 2));
     }
 }
 
@@ -29,13 +25,13 @@
     }
 
     @media screen and (min-width: 768px) {
-        flex-basis: calc((100% - 60px) / 2);
+        flex-basis: calc((100% - 2 * #{$cardGap}) / 2);
 
-        margin: 15px;
+        margin: calc(#{$cardGap} / 2);
     }
 
     @media screen and (min-width: 1200px) {
-        flex-basis: calc((100% - 120px) / 4);
+        flex-basis: calc((100% - 4 * #{$cardGap}) / 4);
     }
 }
 
@@ -63,20 +59,4 @@
 
     font-size: 16px;
     line-height: 1.19;
-}
-
-.socials--employee-locate {
-    display: flex;
-    justify-content: center;
-}
-
-.socials__link--employee-color {
-    color: $iconColor;
-    background-color: $whiteColor;
-
-    &:hover,
-    &:focus {
-        color: $whiteColor;
-        background-color: $accentColor;
-    }
 }

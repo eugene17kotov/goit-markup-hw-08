@@ -1,5 +1,4 @@
 .container {
-    // width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
     margin-right: auto;
@@ -15,5 +14,25 @@
 
     @media screen and (min-width: 1200px) {
         width: 1200px;
+    }
+}
+
+.page-header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: 767px) {
+        position: relative;
+    }
+
+    border-bottom: 1px solid $headerBorderColor;
+}
+
+.page-footer__container {
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
     }
 }

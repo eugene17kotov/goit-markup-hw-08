@@ -1,26 +1,16 @@
-.section--mobile-hidden {
-    @media screen and (max-width: 1199px) {
-        display: none;
-    }
-}
-
-.section--top-padding-reset {
-    padding-top: 0;
-}
-
 .features {
     display: flex;
     justify-content: center;
 
-    margin: -15px;
+        margin: calc(-1 * (#{$cardGap} / 2));
 }
 
 .features__item {
     position: relative;
 
-    margin: 15px;
+        margin: calc(#{$cardGap} / 2);
 
-    flex-basis: calc((100% - 90px) / 3);
+        flex-basis: calc((100% - 3 * #{$cardGap}) / 3);
 }
 
 .features__text-bg {

@@ -35,7 +35,7 @@
     .backdrop--is-hidden & {
         visibility: hidden;
         pointer-events: none;
-        opacity: 0;
+        opacity: 0.3;
         transform: translate(-50%, -50%) scale(3);
     }
 }

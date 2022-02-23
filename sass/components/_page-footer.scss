@@ -5,15 +5,7 @@
     background-color: $accentBgColor;
 }
 
-.page-footer__container {
-    @media screen and (min-width: 1200px) {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-    }
-}
-
-.tablet-wrapper {
+.page-footer__tablet-wrapper {
     @media screen and (max-width: 1199px) {
         margin-bottom: 60px;
     }
@@ -34,18 +26,6 @@
     }
 }
 
-.page-footer__logo {
-    margin-bottom: 20px;
-
-    color: $whiteColor;
-}
-
-.page-footer__socials {
-    @media screen and (min-width: 1200px) {
-        margin-left: 70px;
-    }
-}
-
 .page-footer__text {
     @media screen and (max-width: 1199px) {
         text-align: center;
@@ -59,14 +39,4 @@
     color: $whiteColor;
 
     text-transform: uppercase;
-}
-
-.socials__link--ft-color {
-    color: $whiteColor;
-    background-color: rgba(255, 255, 255, 0.1);
-
-    &:hover,
-    &:focus {
-        background-color: $accentColor;
-    }
 }

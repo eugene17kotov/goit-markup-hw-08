@@ -1,13 +1,9 @@
-.section__title--hidden {
-    @extend %visually-hidden;
-}
-
 .advantages {
     @media screen and (min-width: 768px) {
         display: flex;
         flex-wrap: wrap;
 
-        margin: -15px;
+        margin: calc(-1 * (#{$cardGap} / 2));
     }
 }
 
@@ -21,13 +17,13 @@
     }
 
     @media screen and (min-width: 768px) {
-        flex-basis: calc((100% - 60px) / 2);
+        flex-basis: calc((100% - 2 * #{$cardGap}) / 2);
 
-        margin: 15px;
+        margin: calc(#{$cardGap} / 2);
     }
 
     @media screen and (min-width: 1200px) {
-        flex-basis: calc((100% - 120px) / 4);
+        flex-basis: calc((100% - 4 * #{$cardGap}) / 4);
     }
 }
 
