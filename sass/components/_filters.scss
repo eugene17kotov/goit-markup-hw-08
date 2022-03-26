@@ -4,12 +4,18 @@
 
     gap: 15px 8px;
 
-    margin-bottom: $titleContentGap;
+    margin-bottom: 40px;
 
     // margin: -4px;
 
     @media screen and (min-width: 768px) {
         justify-content: center;
+
+        margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-bottom: $titleContentGap;
     }
 }
 
